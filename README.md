@@ -1,6 +1,7 @@
 phpredis
 ========
 
+PHP extension for interfacing with Redis
 
 Samples
 -------
