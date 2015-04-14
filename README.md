@@ -9,7 +9,8 @@ include phpredis
 ```
 ```
 phpredis::config {
-  "session.save_path": value => 'tcp://host1:6379?weight=1, tcp://host2:6379?weight=2';
+  "session.save_handler": value => 'redis';
+  "session.save_path":    value => 'tcp://host1:6379?weight=1, tcp://host2:6379?weight=2';
 }
 ```
 
