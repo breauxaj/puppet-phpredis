@@ -1,4 +1,6 @@
-class phpredis {
+class phpredis (
+  $ensure = 'latest'
+){
   $required = $::operatingsystem ? {
     /(?i-mx:centos|fedora|redhat|scientific)/ => [
       'php-pecl-redis',
@@ -6,8 +8,6 @@ class phpredis {
     ],
   }
 
-  package { $required:
-    ensure  => latest,
-  }
+  package { $required: ensure => $ensure }
 
 }
